@@ -20,7 +20,7 @@ And then execute:
 Create a `.rubocop.yml` in the root folder with the following directives:
 ```yaml
 inherit_gem:
-  percy-style:
+  pixelcabin-rubocop:
     - default.yml
 ```
 
