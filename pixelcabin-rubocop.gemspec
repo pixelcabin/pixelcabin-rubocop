@@ -1,4 +1,3 @@
-
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "pixelcabin/rubocop/version"
@@ -28,4 +27,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency 'bump', '~> 0.7.0'
+  spec.add_development_dependency 'gemfury', '~> 0.9.1'
 end
