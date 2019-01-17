@@ -1,8 +1,6 @@
 require 'bundler/gem_tasks'
 require 'bump'
 
-RSpec::Core::RakeTask.new(:spec)
-
 begin
   require 'bundler/setup'
 rescue LoadError
@@ -36,7 +34,7 @@ namespace :release do
     Bump::Bump.run(args[:type], commit: true, bundle: false, tag: true)
   end
 
-  desc 'push gem to gem fury'
+  desc 'push current gem version to gem fury'
   task :push do
     current = Bump::Bump.current
     gem_name = "pixelcabin-rubocop-#{current}.gem"
