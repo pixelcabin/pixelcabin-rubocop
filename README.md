@@ -1,4 +1,5 @@
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/pixelcabin/pixelcabin-rubocop.svg?color=green&label=gem&style=plastic)
+[![Build Status](https://travis-ci.com/pixelcabin/pixelcabin-rubocop.svg?branch=master)](https://travis-ci.com/pixelcabin/pixelcabin-rubocop)
 
 # Pixelcabin::Rubocop
 
