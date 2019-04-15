@@ -31,15 +31,15 @@ namespace :release do
 
   desc 'bump version'
   task :bump, [:type] do |_, args|
-    Bump::Bump.run(args[:type], commit: true, bundle: false, tag: true)
+    Bump::Bump.run(args[:type], commit: true, bundle: true, tag: true)
   end
 
   desc 'push current gem version to gem fury'
   task :push do
     current = Bump::Bump.current
     gem_name = "pixelcabin-rubocop-#{current}.gem"
-    system "gem build pixelcabin-rubocop.gemspec"
-    system "mkdir -p .releases"
+    system 'gem build pixelcabin-rubocop.gemspec'
+    system 'mkdir -p .releases'
     system "fury push #{gem_name} --as=pixelcabin"
     system "mv #{gem_name} ./.releases/"
   end

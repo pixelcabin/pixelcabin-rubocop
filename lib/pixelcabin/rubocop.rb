@@ -1,4 +1,4 @@
-require "pixelcabin/rubocop/version"
+require 'pixelcabin/rubocop/version'
 
 module Pixelcabin
   module Rubocop
