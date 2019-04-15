@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pixelcabin-rubocop (0.2.0)
+    pixelcabin-rubocop (0.3.0)
       rubocop (~> 0.67.2)
 
 GEM
