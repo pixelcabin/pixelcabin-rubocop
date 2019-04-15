@@ -5,7 +5,7 @@ AllCops:
     - 'node_modules/**/*'
 
 Rails:
-  enabled: true
+  Enabled: true
 
 Metrics/LineLength:
   Description: 'Limit lines to 80 characters.'
