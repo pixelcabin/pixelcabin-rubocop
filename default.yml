@@ -69,7 +69,7 @@ Style/EmptyMethod:
 Style/GuardClause:
   Enabled: false
 
-Layout/TrailingBlankLines:
+Layout/TrailingEmptyLines:
   Enabled: false
 
 Style/BlockComments:
