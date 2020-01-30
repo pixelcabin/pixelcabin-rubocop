@@ -12,30 +12,30 @@ require 'rake'
 
 namespace :release do
   desc 'release a patch upgrade to gem fury'
-  task patch: :environment do
+  task :patch do
     Rake::Task['release:bump'].invoke('patch')
     Rake::Task['release:push'].invoke
   end
 
   desc 'release a minor version upgrade to gem fury'
-  task minor: :environment do
+  task :minor do
     Rake::Task['release:bump'].invoke('minor')
     Rake::Task['release:push'].invoke
   end
 
   desc 'release a major version upgrade to gem fury'
-  task major: :environment do
+  task :major do
     Rake::Task['release:bump'].invoke('major')
     Rake::Task['release:push'].invoke
   end
 
   desc 'bump version'
-  task :bump, [:type] => :environment do |_, args|
+  task :bump, [:type] do |_, args|
     Bump::Bump.run(args[:type], commit: true, bundle: true, tag: true)
   end
 
   desc 'push current gem version to gem fury'
-  task push: :environment do
+  task :push do
     current = Bump::Bump.current
     gem_name = "pixelcabin-rubocop-#{current}.gem"
     system 'gem build pixelcabin-rubocop.gemspec'
