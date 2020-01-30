@@ -3,3 +3,6 @@ inherit_from: default.yml
 inherit_mode:
   merge:
     - Exclude
+
+Rails/RakeEnvironment:
+  Enabled: false
