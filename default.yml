@@ -1,13 +1,15 @@
+require:
+  - rubocop-rails
+
 AllCops:
+  TargetRubyVersion: '2.4.1'
   Exclude:
     - 'db/schema.rb'
     - 'bin/*'
     - 'node_modules/**/*'
 
-Rails:
-  Enabled: true
 
-Metrics/LineLength:
+Layout/LineLength:
   Description: 'Limit lines to 80 characters.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#80-character-limits'
   Enabled: false
