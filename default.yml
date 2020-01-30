@@ -71,7 +71,7 @@ Style/EmptyMethod:
 Style/GuardClause:
   Enabled: false
 
-Layout/TrailingEmptyLines:
+Layout/TrailingBlankLines:
   Enabled: false
 
 Style/BlockComments:
