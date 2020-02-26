@@ -1,5 +1,6 @@
 require:
   - rubocop-rails
+  - rubocop-performance
 
 AllCops:
   TargetRubyVersion: '2.4.1'
@@ -10,93 +11,45 @@ AllCops:
 
 
 Metrics/LineLength:
-  Description: 'Limit lines to 80 characters.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#80-character-limits'
-  Enabled: false
+  Enabled: true
+  Max: 160
 
 Metrics/ClassLength:
-  Enabled: false
-
-Lint/IneffectiveAccessModifier:
-  Enabled: false
+  Enabled: true
+  CountComments: false
+  Max: 200
 
 Metrics/AbcSize:
-  Description: >-
-    A calculated magnitude based on number of assignments,
-    branches, and conditions.
-  Reference: 'http://c2.com/cgi/wiki?AbcMetric'
-  Enabled: false
+  Enabled: true
   Max: 20
 
 Metrics/BlockLength:
-  Max: 152
+  Enabled: true
+  Max: 100
 
 Metrics/MethodLength:
   Description: 'Avoid methods longer than 30 lines of code.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#short-methods'
   Enabled: true
-  Max: 80
+  Max: 50
 
 Metrics/PerceivedComplexity:
-  Description: >-
-    A complexity metric geared towards measuring complexity for a
-    human reader.
-  Max: 13
-
-Metrics/CyclomaticComplexity:
   Max: 10
 
+Metrics/CyclomaticComplexity:
+  Max: 7
+
 Style/Documentation:
-  Description: 'Document classes and non-namespace modules.'
-  Enabled: false
+  Enabled: true
   Exclude:
     - 'spec/**/*'
-    - 'test/**/*'
     - 'config/application.rb'
     - 'db/migrate/*'
     - 'db/schema.rb'
-
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
-Bundler/OrderedGems:
-  Enabled: false
 
 Style/NumericLiterals:
   Enabled: false
 
 Style/EmptyMethod:
-  Enabled: false
-
-Style/GuardClause:
-  Enabled: false
-
-Layout/TrailingBlankLines:
-  Enabled: false
-
-Style/BlockComments:
-  Enabled: false
-
-Layout/CaseIndentation:
-  Enabled: false
-
-Lint/EmptyWhen:
-  Enabled: false
-
-Layout/SpaceInsideHashLiteralBraces:
-  Enabled: false
-
-Style/ClassAndModuleChildren:
-  Enabled: false
-
-Style/ConditionalAssignment:
-  Enabled: false
-
-Style/PercentLiteralDelimiters:
   Enabled: true
-  PreferredDelimiters:
-    default: '()'
-    '%i': '[]'
-    '%I': '[]'
-    '%w': '[]'
-    '%W': '[]'
+  EnforcedStyle: expanded
