@@ -1,0 +1,37 @@
+---
+version: '2'
+checks:
+  method-complexity:
+    config:
+      threshold: 7
+
+prepare:
+  fetch:
+    - url: "https://raw.githubusercontent.com/pixelcabin/pixelcabin-rubocop/master/default.yml"
+      path: ".rubocop.yml"
+
+engines:
+  brakeman:
+    enabled: false
+  bundler-audit:
+    enabled: true
+  csslint:
+    enabled: false
+  scsslint:
+    enabled: false
+  coffeelint:
+    enabled: false
+  duplication:
+    enabled: true
+    config:
+      languages:
+        - ruby
+  eslint:
+    enabled: false
+  fixme:
+    enabled: false
+  rubocop:
+    enabled: true
+    channel: rubocop-0-79
+exclude_paths:
+  - config/
