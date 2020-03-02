@@ -13,6 +13,7 @@ rubocop
 ```
 ### codeclimate
 Add the following lines to .codeclimate.yml for the project
+
 ```yaml
 prepare:
   fetch:
@@ -21,7 +22,7 @@ prepare:
 ```
 Remember to specify the rubocop version used as dependency for this gem in the codeclimate config
 ```yaml
-channel: rubocop-0-67-2
+channel: rubocop-0-79-0
 ```
 
 ## Installation
@@ -43,7 +44,7 @@ Or install it yourself as:
 $ gem install pixelcabin-rubocop
 ```
 ## Deployment
-* Merge `dev` into `master`
+
 * Switch to `master` 
 ```bash
 git checkout master
@@ -53,8 +54,4 @@ git checkout master
     rake release:patch #bumps release version from 0.0.1 to 0.0.2
     rake release:minor #bumps release version from 0.0.1 to 0.1.0
     rake release:major #bumps release version from 0.0.1 to 1.0.0
-```
-* Push the new version tag/release to github
-```bash
-git push origin master
 ```
