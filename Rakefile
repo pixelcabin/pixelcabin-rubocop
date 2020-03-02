@@ -31,16 +31,42 @@ namespace :release do
 
   desc 'bump version'
   task :bump, [:type] do |_, args|
-    Bump::Bump.run(args[:type], commit: true, bundle: true, tag: true)
+    Bump.replace_in_default = ['README.md']
+    Bump.changelog = true
+    Rake::Task['release:generate_commit_message'].invoke
+    Bump::Bump.run(args[:type], commit: true, bundle: true, tag: false, commit_message: "\n\n#{ENV['COMMIT_MESSAGE']}")
+    Rake::Task['release:tag'].invoke(ENV['COMMIT_MESSAGE'])
   end
 
-  desc 'push current gem version to gem fury'
+  desc 'generate commit message'
+  task :generate_commit_message do
+    read = false
+    lines = []
+    IO.readlines('CHANGELOG.md').each do |line|
+      if read
+        break if line.match(/^\n/)
+
+        lines.push line
+      end
+      read = true if line.match(/\#\# Unreleased/)
+    end
+
+    ENV['COMMIT_MESSAGE'] = lines.join('')
+  end
+
+  desc 'tag release'
+  task :tag, [:message] do |_, args|
+    system('git', 'tag', '-s', '-m', "v#{Bump::Bump.current}", '-m', args[:message], "v#{Bump::Bump.current}")
+  end
+
+  desc 'push gem to gem fury'
   task :push do
     current = Bump::Bump.current
     gem_name = "pixelcabin-rubocop-#{current}.gem"
     system 'gem build pixelcabin-rubocop.gemspec'
-    system 'mkdir -p .releases'
     system "fury push #{gem_name} --as=pixelcabin"
+    system 'mkdir -p .releases'
     system "mv #{gem_name} ./.releases/"
+    system('git', 'push', 'origin', 'master', '--tags')
   end
 end
