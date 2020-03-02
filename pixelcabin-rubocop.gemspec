@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rubocop', '~> 0.79.0'
   spec.add_dependency 'rubocop-rails', '~> 2.4.2'
 
-  spec.add_development_dependency 'bump', '~> 0.7.0'
+  spec.add_development_dependency 'bump', '~> 0.9.0'
   spec.add_development_dependency 'bundler', '~> 2.0.1'
   spec.add_development_dependency 'gemfury', '~> 0.9.1'
   spec.add_development_dependency 'rake', '~> 10.0'
