@@ -33,7 +33,7 @@ namespace :release do
 
   desc 'bump version'
   task :bump, [:type] do |_, args|
-    Bump.replace_in_default = ['README.md']
+    # Bump.replace_in_default = ['README.md']
     Bump.changelog = true
     Rake::Task['release:generate_commit_message'].invoke
     Bump::Bump.run(args[:type], commit: true, bundle: true, tag: false, commit_message: "\n\n#{ENV['COMMIT_MESSAGE']}")
@@ -63,12 +63,12 @@ namespace :release do
 
   desc 'push gem to gem fury'
   task :push do
-    current = Bump::Bump.current
-    gem_name = "pixelcabin-rubocop-#{current}.gem"
-    system 'gem build pixelcabin-rubocop.gemspec'
-    system "fury push #{gem_name} --as=pixelcabin"
-    system 'mkdir -p .releases'
-    system "mv #{gem_name} ./.releases/"
+    # current = Bump::Bump.current
+    # gem_name = "pixelcabin-rubocop-#{current}.gem"
+    # system 'gem build pixelcabin-rubocop.gemspec'
+    # system "fury push #{gem_name} --as=pixelcabin"
+    # system 'mkdir -p .releases'
+    # system "mv #{gem_name} ./.releases/"
     system('git', 'push', 'origin', 'master', '--tags')
   end
 end
