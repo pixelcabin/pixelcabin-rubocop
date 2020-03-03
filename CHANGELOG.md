@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+## 0.6.5 - 03/03/20
 **Changed**
 * Fix performance issue in Rakefile
 

@@ -10,7 +10,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 source 'https://TOKEN@gem.fury.io/pixelcabin' do
-  gem 'pixelcabin-rubocop', '~> 0.6.4'
+  gem 'pixelcabin-rubocop', '~> 0.6.5'
 end
 ```
 
