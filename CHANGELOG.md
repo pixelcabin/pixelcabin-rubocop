@@ -1,6 +1,11 @@
 # Changelog
 
 ## Unreleased
+**Changed**
+* Update rake version
+
+## 0.6.0 - 03/03/20
+**Changed**
 * Update the release Rakefile; Update Bump to v0.9
 * Add Changelog
 * Upgrade rubocop to v0.79
