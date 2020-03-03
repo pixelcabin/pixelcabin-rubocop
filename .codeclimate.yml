@@ -10,7 +10,7 @@ prepare:
     - url: "https://raw.githubusercontent.com/pixelcabin/pixelcabin-rubocop/master/default.yml"
       path: ".rubocop.yml"
 
-engines:
+plugins:
   brakeman:
     enabled: false
   bundler-audit:
@@ -33,5 +33,5 @@ engines:
   rubocop:
     enabled: true
     channel: rubocop-0-79
-exclude_paths:
+exclude_patterns:
   - config/
