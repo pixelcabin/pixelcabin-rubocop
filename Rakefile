@@ -63,12 +63,12 @@ namespace :release do
 
   desc 'push gem to gem fury'
   task :push do
-    # current = Bump::Bump.current
-    # gem_name = "pixelcabin-rubocop-#{current}.gem"
-    # system 'gem build pixelcabin-rubocop.gemspec'
-    # system "fury push #{gem_name} --as=pixelcabin"
-    # system 'mkdir -p .releases'
-    # system "mv #{gem_name} ./.releases/"
+    current = Bump::Bump.current
+    gem_name = "pixelcabin-rubocop-#{current}.gem"
+    system 'gem build pixelcabin-rubocop.gemspec'
+    system "fury push #{gem_name} --as=pixelcabin"
+    system 'mkdir -p .releases'
+    system "mv #{gem_name} ./.releases/"
     system('git', 'push', 'origin', 'master', '--tags')
   end
 end
