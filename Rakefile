@@ -33,7 +33,7 @@ namespace :release do
 
   desc 'bump version'
   task :bump, [:type] do |_, args|
-    # Bump.replace_in_default = ['README.md']
+    Bump.replace_in_default = ['README.md']
     Bump.changelog = true
     Rake::Task['release:generate_commit_message'].invoke
     Bump::Bump.run(args[:type], commit: true, bundle: true, tag: false, commit_message: "\n\n#{ENV['COMMIT_MESSAGE']}")

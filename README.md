@@ -5,6 +5,28 @@
 
 Shared rubocop gem for Pixelcabin 
 
+## Installation
+Add this line to your application's Gemfile:
+
+```ruby
+source 'https://TOKEN@gem.fury.io/pixelcabin' do
+  gem 'pixelcabin-rubocop', '~> 0.6.3'
+end
+```
+
+The token can be found within your gemfury dashboard (under the Tokens section). Using a deploy token from the pixelcabin dashboard is preferable instead of using personal deploy tokens.
+
+And then execute:
+```bash
+$ bundle
+```
+
+Or install it yourself as:
+```bash
+$ gem install pxl-disco-app
+```
+
+
 ## Usage
 
 ### console

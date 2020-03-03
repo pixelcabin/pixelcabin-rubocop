@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+**Changed**
+* Update README & Rakefile
+
 ## 0.6.3 - 03/03/20
 **Changed**
 * Update Rakefile
