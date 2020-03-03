@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+## 0.6.6 - 03/03/20
 **Changed**
 * Metrics/LineLength replaced to Layout/LineLength
 
