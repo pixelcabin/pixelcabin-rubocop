@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pixelcabin-rubocop (0.6.2)
+    pixelcabin-rubocop (0.6.3)
       rubocop (~> 0.79.0)
       rubocop-performance (~> 1.5.2)
       rubocop-rails (~> 2.4.2)
