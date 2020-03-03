@@ -9,7 +9,7 @@ AllCops:
     - 'node_modules/**/*'
 
 
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: true
   Max: 160
 
