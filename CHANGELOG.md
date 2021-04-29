@@ -3,6 +3,7 @@
 ## Unreleased
 **Changed**
 * Upgrade Rubocop to 1.11.0 (Latest supported rubocop channel on codeclimate)
+* Add pxl_gem_deployer to deploy the gem to gemfury
 
 ## 0.6.7 - 03/03/20
 ## 0.6.6 - 03/03/20
