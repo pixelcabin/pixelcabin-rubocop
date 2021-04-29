@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   # spec.description   = %Write a longer description or delete this line.}
   # spec.homepage      = "Add gem's website or public repo URL here."
 
-  spec.required_ruby_version = '>= 2.3'
+  spec.required_ruby_version = '>= 2.5'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -24,9 +24,10 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'rubocop', '~> 0.79.0'
-  spec.add_dependency 'rubocop-performance', '~> 1.5.2'
-  spec.add_dependency 'rubocop-rails', '~> 2.4.2'
+  spec.add_dependency 'rubocop', '~> 1.10'
+  spec.add_dependency 'rubocop-performance', '~> 1.11'
+  spec.add_dependency 'rubocop-rails', '~> 2.9'
+  spec.add_dependency 'rubocop-rake', '~> 0.5'
 
   spec.add_development_dependency 'bump', '~> 0.9.0'
   spec.add_development_dependency 'bundler', '~> 2.0.1'

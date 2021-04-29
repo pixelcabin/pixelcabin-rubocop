@@ -46,14 +46,14 @@ namespace :release do
     lines = []
     IO.readlines('CHANGELOG.md').each do |line|
       if read
-        break if line =~ /^\n/
+        break if line.matches?(/^\n/)
 
         lines.push line
       end
-      read = true if line =~ /\#\# Unreleased/
+      read = true if line.matches?(/\#\# Unreleased/)
     end
 
-    ENV['COMMIT_MESSAGE'] = lines.join('')
+    ENV['COMMIT_MESSAGE'] = lines.join
   end
 
   desc 'tag release'

@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+**Changed**
+* Upgrade Rubocop to 1.11.0 (Latest supported rubocop channel on codeclimate)
+
 ## 0.6.7 - 03/03/20
 ## 0.6.6 - 03/03/20
 **Changed**
