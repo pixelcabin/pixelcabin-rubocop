@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+## 1.1.0 - 03/03/20
 
 **Fixed**
 * Remove deprecated cop
