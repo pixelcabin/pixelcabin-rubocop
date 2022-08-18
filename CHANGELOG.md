@@ -1,6 +1,10 @@
 # Changelog
 
 ## Unreleased
+
+**Fixed**
+* Remove deprecated cop
+
 ## 1.0.0 - 03/03/20
 **Changed**
 * Upgrade Rubocop to 1.11.0 (Latest supported rubocop channel on codeclimate)
