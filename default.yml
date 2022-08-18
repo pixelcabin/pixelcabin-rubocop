@@ -54,7 +54,7 @@ Style/EmptyMethod:
   Enabled: true
   EnforcedStyle: expanded
 
-Gemspec/DateAssignment:
+Gemspec/DeprecatedAttributeAssignment:
   Enabled: true
 
 Layout/SpaceBeforeBrackets:
